@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<level name="Level 1">
+		<roadClass>Road</roadClass>
+		<towerPlacingClass>TowerTile</towerPlacingClass>
+		<sizeOfTrack>
+			<x>500</x>
+			<y>500</y>
+		</sizeOfTrack>
+		<startCurrency>1000</startCurrency>
+		<numTowers>6</numTowers>
+		<numUnitsToWin>30</numUnitsToWin>
+		<roads>
+			<road direction="south">
+				<start>
+					<x>50</x>
+					<y>0</y>
+				</start>
+				<goal>
+					<x>50</x>
+					<y>450</y>
+				</goal>
+			</road>
+			<road direction="east">
+				<start>
+					<x>50</x>
+					<y>50</y>
+				</start>
+				<goal>
+					<x>200</x>
+					<y>50</y>
+				</goal>
+			</road>
+			<road direction="south">
+				<start>
+					<x>200</x>
+					<y>50</y>
+				</start>
+				<goal>
+					<x>200</x>
+					<y>300</y>
+				</goal>
+			</road>
+			<road direction="west">
+				<start>
+					<x>200</x>
+					<y>300</y>
+				</start>
+				<goal>
+					<x>100</x>
+					<y>300</y>
+				</goal>
+			</road>
+			<intersection direction="east" direction2="south">
+				<x>50</x>
+				<y>50</y>
+			</intersection>
+		</roads>
+		<start>
+			<x>50</x>
+			<y>0</y>
+		</start>
+		<goal>
+			<x>50</x>
+			<y>450</y>
+		</goal>
+
+	</level>
+
+
+	<level name="Level 2">
+		<roadClass>Road</roadClass>
+		<towerPlacingClass>TowerTile</towerPlacingClass>
+		<sizeOfTrack>
+			<x>500</x>
+			<y>500</y>
+		</sizeOfTrack>
+		<startCurrency>1000</startCurrency>
+		<numTowers>6</numTowers>
+		<numUnitsToWin>30</numUnitsToWin>
+		<roads>
+			<road direction="east">
+				<start>
+					<x>0</x>
+					<y>400</y>
+				</start>
+				<goal>
+					<x>100</x>
+					<y>400</y>
+				</goal>
+			</road>
+			<road direction="north">
+				<start>
+					<x>100</x>
+					<y>400</y>
+				</start>
+				<goal>
+					<x>100</x>
+					<y>200</y>
+				</goal>
+			</road>
+			<road direction="east">
+				<start>
+					<x>100</x>
+					<y>200</y>
+				</start>
+				<goal>
+					<x>250</x>
+					<y>200</y>
+				</goal>
+			</road>
+			<road direction="south">
+				<start>
+					<x>250</x>
+					<y>200</y>
+				</start>
+				<goal>
+					<x>250</x>
+					<y>400</y>
+				</goal>
+			</road>
+			<road direction="east">
+				<start>
+					<x>250</x>
+					<y>400</y>
+				</start>
+				<goal>
+					<x>350</x>
+					<y>400</y>
+				</goal>
+			</road>
+			<road direction="north">
+				<start>
+					<x>350</x>
+					<y>400</y>
+				</start>
+				<goal>
+					<x>350</x>
+					<y>50</y>
+				</goal>
+			</road>
+			<road direction="west">
+				<start>
+					<x>350</x>
+					<y>50</y>
+				</start>
+				<goal>
+					<x>0</x>
+					<y>50</y>
+				</goal>
+			</road>
+
+
+
+		</roads>
+		<start>
+			<x>0</x>
+			<y>400</y>
+		</start>
+		<goal>
+			<x>0</x>
+			<y>50</y>
+		</goal>
+	</level>
+	
+	<level name="Level 3">
+		<roadClass>Road</roadClass>
+		<towerPlacingClass>TowerTile</towerPlacingClass>
+		<sizeOfTrack>
+			<x>500</x>
+			<y>500</y>
+		</sizeOfTrack>
+		<startCurrency>2000</startCurrency>
+		<numTowers>8</numTowers>
+		<numUnitsToWin>30</numUnitsToWin>
+		<roads>
+			<road direction="east">
+				<start>
+					<x>0</x>
+					<y>200</y>
+				</start>
+				<goal>
+					<x>50</x>
+					<y>200</y>
+				</goal>
+			</road>
+			<road direction="north">
+				<start>
+					<x>50</x>
+					<y>200</y>
+				</start>
+				<goal>
+					<x>50</x>
+					<y>50</y>
+				</goal>
+			</road>
+
+			<road direction="south">
+				<start>
+					<x>50</x>
+					<y>200</y>
+				</start>
+				<goal>
+					<x>50</x>
+					<y>400</y>
+				</goal>
+			</road>
+
+			<road direction="east">
+				<start>
+					<x>50</x>
+					<y>400</y>
+				</start>
+				<goal>
+					<x>150</x>
+					<y>400</y>
+				</goal>
+			</road>
+
+			<road direction="north">
+				<start>
+					<x>150</x>
+					<y>400</y>
+				</start>
+				<goal>
+					<x>150</x>
+					<y>250</y>
+				</goal>
+			</road>
+
+			<road direction="east">
+				<start>
+					<x>50</x>
+					<y>50</y>
+				</start>
+				<goal>
+					<x>150</x>
+					<y>50</y>
+				</goal>
+			</road>
+			<road direction="south">
+				<start>
+					<x>150</x>
+					<y>50</y>
+				</start>
+				<goal>
+					<x>150</x>
+					<y>250</y>
+				</goal>
+			</road>
+			<road direction="east">
+				<start>
+					<x>150</x>
+					<y>250</y>
+				</start>
+				<goal>
+					<x>250</x>
+					<y>250</y>
+				</goal>
+			</road>
+
+			<road direction="south">
+				<start>
+					<x>250</x>
+					<y>250</y>
+				</start>
+				<goal>
+					<x>250</x>
+					<y>400</y>
+				</goal>
+			</road>
+			<road direction="east">
+				<start>
+					<x>250</x>
+					<y>400</y>
+				</start>
+				<goal>
+					<x>350</x>
+					<y>400</y>
+				</goal>
+			</road>
+
+			<road direction="north">
+				<start>
+					<x>350</x>
+					<y>400</y>
+				</start>
+				<goal>
+					<x>350</x>
+					<y>250</y>
+				</goal>
+			</road>
+
+			<road direction="north">
+				<start>
+					<x>250</x>
+					<y>250</y>
+				</start>
+				<goal>
+					<x>250</x>
+					<y>50</y>
+				</goal>
+			</road>
+			<road direction="east">
+				<start>
+					<x>250</x>
+					<y>50</y>
+				</start>
+				<goal>
+					<x>350</x>
+					<y>50</y>
+				</goal>
+			</road>
+			<road direction="south">
+				<start>
+					<x>350</x>
+					<y>50</y>
+				</start>
+				<goal>
+					<x>350</x>
+					<y>250</y>
+				</goal>
+			</road>
+			<road direction="east">
+				<start>
+					<x>350</x>
+					<y>250</y>
+				</start>
+				<goal>
+					<x>450</x>
+					<y>250</y>
+				</goal>
+			</road>
+			<intersection direction="north" direction2="south">
+				<x>50</x>
+				<y>200</y>
+			</intersection>
+			<intersection direction="south" direction2="north">
+				<x>250</x>
+				<y>250</y>
+			</intersection>
+
+		</roads>
+
+		<start>
+			<x>0</x>
+			<y>200</y>
+		</start>
+		<goal>
+			<x>450</x>
+			<y>250</y>
+		</goal>
+
+	</level>
+</root>
+

@@ -1,0 +1,85 @@
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	
+	<!-- Defining simple elements -->
+    <xs:element name="copyright" type="xs:string" />
+
+    <xs:element name="page" type="xs:integer" />
+    <xs:element name="size" type="xs:integer" />
+    <xs:element name="totalhits" type="xs:integer" />
+    <xs:element name="totalpages" type="xs:integer" />
+    <xs:element name="nextpage" type="xs:string" />
+
+	<xs:element name="image" type="xs:string" />
+	<xs:element name="imagetemplate" type="xs:string" />
+	<xs:element name="color" type="xs:string" />
+	<xs:element name="siteurl" type="xs:string" />
+	<xs:element name="url" type="xs:string" />
+	<xs:element name="statkey" type="xs:string" />
+	<xs:element name="scheduleurl" type="xs:string" />
+	<xs:element name="channeltype" type="xs:string" />
+	<xs:element name="xmltvid" type="xs:string" />
+
+	<!-- Defining attributes -->
+	<xs:attribute name="id" type="xs:integer" />
+    <xs:attribute name="name" type="xs:string" />
+	
+	<!-- Defining complex elements -->
+    <xs:element name="sr">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="copyright" />
+                <xs:element ref="pagination" />
+                <xs:element ref="channels" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="pagination">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="page" />
+                <xs:element ref="size" />
+                <xs:element ref="totalhits" />
+                <xs:element ref="totalpages" />
+                <xs:element ref="nextpage" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="liveaudio">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="url" />
+                <xs:element ref="statkey" />
+            </xs:sequence>
+            <xs:attribute ref="id" />
+        </xs:complexType>
+    </xs:element>
+
+	<xs:element name="channel">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="image" />
+                <xs:element ref="imagetemplate" />
+                <xs:element ref="color" />
+                <xs:element ref="siteurl" />
+                <xs:element ref="liveaudio" />
+                <xs:element ref="scheduleurl" />
+                <xs:element ref="channeltype" />
+                <xs:element ref="xmltvid" />
+            </xs:sequence>
+            <xs:attribute ref="id" />
+            <xs:attribute ref="name" />
+        </xs:complexType>
+    </xs:element>
+
+	<xs:element name="channels">
+        <xs:complexType>
+			<xs:sequence>
+				<xs:element ref="channel" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	
+</xs:schema>

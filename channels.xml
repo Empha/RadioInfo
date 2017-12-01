@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LMSData LastUpdate="2013-12-09 09:19:59">
+<Offer>
+<CampaignName>EF Canarias</CampaignName>
+<DepartureName>Stockholm/Arlanda</DepartureName>
+<OutDate>2014-01-12</OutDate>
+<DestinationName>Gran Canaria</DestinationName>
+<CityName>Gran Canaria</CityName>
+<RoomDescription>Endast flyg</RoomDescription>
+<JourneyLength>8</JourneyLength>
+<FlightExtern>DY9773</FlightExtern>
+<CurrentPrice>2498 kr</CurrentPrice>
+<OriginalPrice>2648 kr</OriginalPrice>
+<PriceCurrency>SEK</PriceCurrency>
+<HotelName/>
+<HotelImage>
+http://images.tuinordic.com/travel/images/hotel/Default.jpg
+</HotelImage>
+<HotelGrade>0</HotelGrade>
+<NoOfSeatsRemaining>8</NoOfSeatsRemaining>
+<HotelGradeString/>
+<ContentLink/>
+<BookLink>beepbeep</BookLink>
+<JourneyLengthWeeks>1</JourneyLengthWeeks>
+</Offer>
+<Offer>
+<CampaignName>Novemberfynd</CampaignName>
+<DepartureName>VÃ¤xjÃ¶</DepartureName>
+<OutDate>2014-01-19</OutDate>
+<DestinationName>Gran Canaria</DestinationName>
+<CityName>Bahia Feliz</CityName>
+<RoomDescription>TvÃƒÂ¥rumslÃƒÂ¤genhet fÃƒÂ¶r 2 pers</RoomDescription>
+<JourneyLength>8</JourneyLength>
+<FlightExtern>JTG713</FlightExtern>
+<CurrentPrice>4113 kr</CurrentPrice>
+<OriginalPrice>5613 kr</OriginalPrice>
+<PriceCurrency>SEK</PriceCurrency>
+<HotelName>Blue Village Ã¢ Playa Feliz</HotelName>
+<HotelImage>
+http://images.tuinordic.com/travel/images/hotel/hotel-234-1-0198282-1309240150.jpg
+</HotelImage>
+<HotelGrade>4</HotelGrade>
+<NoOfSeatsRemaining>8</NoOfSeatsRemaining>
+<HotelGradeString>FFFF</HotelGradeString>
+<ContentLink>boopbeep</ContentLink>
+<BookLink>boopboop</BookLink>
+<JourneyLengthWeeks>1</JourneyLengthWeeks>
+</Offer>
+<Offer>
+<CampaignName>Novemberfynd</CampaignName>
+<DepartureName>Karlstad</DepartureName>
+<OutDate>2014-01-29</OutDate>
+<DestinationName>Gran Canaria</DestinationName>
+<CityName>Bahia Feliz</CityName>
+<RoomDescription>Dubbelrum</RoomDescription>
+<JourneyLength>8</JourneyLength>
+<FlightExtern>DK1813</FlightExtern>
+<CurrentPrice>4548 kr</CurrentPrice>
+<OriginalPrice>5998 kr</OriginalPrice>
+<PriceCurrency>SEK</PriceCurrency>
+<HotelName>Blue Village Ã¢ Orquidea</HotelName>
+<HotelImage>
+http://images.tuinordic.com/travel/images/hotel/hotel-363-1-0198256-1308160950.jpg
+</HotelImage>
+<HotelGrade>4</HotelGrade>
+<NoOfSeatsRemaining>8</NoOfSeatsRemaining>
+<HotelGradeString>FFFF</HotelGradeString>
+<ContentLink>boop</ContentLink>
+<BookLink>boop</BookLink>
+<JourneyLengthWeeks>1</JourneyLengthWeeks>
+</Offer>
+</LMSData>

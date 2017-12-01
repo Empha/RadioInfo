@@ -1,0 +1,90 @@
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Defining simple elements -->
+    <xs:element name="copyright" type="xs:string" />
+
+    <xs:element name="page" type="xs:integer" />
+    <xs:element name="size" type="xs:integer" />
+    <xs:element name="totalhits" type="xs:integer" />
+    <xs:element name="totalpages" type="xs:integer" />
+    <xs:element name="nextpage" type="xs:string" />
+
+    <xs:element name="episodeid" type="xs:integer" />
+    <xs:element name="title" type="xs:string" />
+    <xs:element name="subtitle" type="xs:string" />
+    <xs:element name="description" type="xs:string" />
+    <xs:element name="starttimeutc" type="xs:dateTime" />
+    <xs:element name="endtimeutc" type="xs:dateTime" />
+    <xs:element name="imageurl" type="xs:string" />
+    <xs:element name="imageurltemplate" type="xs:string" />
+
+    <!-- Defining attributes -->
+    <xs:attribute name="id" type="xs:integer" />
+    <xs:attribute name="name" type="xs:string" />
+
+    <!-- Defining complex elements -->
+    <xs:element name="sr">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="copyright" />
+                <xs:element ref="pagination" />
+                <xs:element ref="schedule" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="pagination">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="page" />
+                <xs:element ref="size" />
+                <xs:element ref="totalhits" />
+                <xs:element ref="totalpages" />
+                <xs:element ref="nextpage" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="program">
+        <xs:complexType>
+            <xs:attribute ref="id" />
+            <xs:attribute ref="name" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="channel">
+        <xs:complexType>
+            <xs:attribute ref="id" />
+            <xs:attribute ref="name" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="scheduledepisode">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="episodeid" />
+                <xs:element ref="title" />
+                <xs:element ref="subtitle" />
+                <xs:element ref="description" />
+                <xs:element ref="starttimeutc" />
+                <xs:element ref="endtimeutc" />
+                <xs:element ref="program" />
+                <xs:element ref="channel" />
+                <xs:element ref="imageurl" />
+                <xs:element ref="imageurltemplate" />
+            </xs:sequence>
+            <xs:attribute ref="id" />
+            <xs:attribute ref="name" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="schedule">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="scheduledepisode" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
