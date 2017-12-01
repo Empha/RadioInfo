@@ -20,8 +20,6 @@ public class MyGui {
 
 	private JMenu menu;
 	private JMenuItem update;
-	private JMenuItem setTimer;
-	private JMenuItem setDestination;
 	private JMenuItem quit;
 
 	private JMenu channel;
@@ -34,50 +32,74 @@ public class MyGui {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		/* Build panels */
-		JPanel leftPanel = buildLeftPanel();
-		JPanel rightPanel = buildRightPanel();
+		JPanel panel = buildPanel();
         handler = new TableHandler(source);
-        channelImage = new JLabel();
-        frame.add(channelImage, BorderLayout.NORTH);
-		frame.add(rightPanel, BorderLayout.EAST);
-		frame.add(leftPanel, BorderLayout.WEST);
+        frame.add(panel);
 		buildMenu();
 		frame.setResizable(false);
-		frame.setSize(900, 700);
+		frame.setSize(600, 800);
 	}
 
-	private JPanel buildLeftPanel() {
-		JPanel leftPanel = new JPanel();
-		infoArea = new JTextArea();
-		image = new JLabel();
-		leftPanel.add(image, BorderLayout.NORTH);
-        leftPanel.add(infoArea, BorderLayout.SOUTH);
-        return leftPanel;
+	private JPanel buildPanel() {
+        JPanel p = new JPanel(new GridBagLayout());
+        GridBagConstraints c = new GridBagConstraints();
+
+        JButton b = new JButton("previous");
+        b.setSize(200, 20);
+        b.addActionListener(new ChannelListener(this, -1));
+        addComponent(p, b, 0, 0, c);
+
+        channelImage = new JLabel();
+        addComponent(p, channelImage, 1, 0, c);
+
+        b = new JButton("next");
+        b.addActionListener(new ChannelListener(this, 1));
+        addComponent(p, b, 2, 0, c);
+
+        table = new JTable();
+        table.setFont(new Font(table.getFont().getFontName(), Font.PLAIN, 18));
+        //JScrollPane pane = new JScrollPane(table);
+        //pane.setPreferredSize(new Dimension(600, 200));
+        //table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        //pane.add(table);
+
+        addComponent(p, table, 0, 1, 3, 1, c);
+
+
+        image = new JLabel();
+        addComponent(p, image, 0, 2, c);
+
+        infoArea = new JTextArea();
+        infoArea.setSize(400, 200);
+        addComponent(p, infoArea, 1, 2, 2, 1, c);
+
+		return p;
 	}
 
-	private JPanel buildRightPanel() {
-		JPanel rightPanel = new JPanel();
-		table = new JTable();
-		table.setFont(new Font(table.getFont().getFontName(), Font.PLAIN, 20));
-		table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-		rightPanel.add(table);
-		return rightPanel;
-	}
+	private void addComponent(JPanel p, JComponent comp, int x, int y, GridBagConstraints cons){
+	    addComponent(p, comp, x, y, 1, 1, cons);
+    }
+
+    private void addComponent(JPanel p, JComponent comp, int x, int y, int width, int height, GridBagConstraints cons) {
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        cons.gridx = x;
+        cons.gridy = y;
+        cons.gridwidth = width;
+        p.add(comp, cons);
+    }
+
 
 	private void buildMenu() {
 		menuBar = new JMenuBar();
 		menu = new JMenu("Menu");
-		setTimer = new JMenuItem("Set automatic updates");
-		setDestination = new JMenuItem("Choose destination");
-		quit = new JMenuItem("Quit");
 
-		setTimer.addActionListener(new TimerListener(this));
-		setDestination.addActionListener(new DestinationListener(this.frame,
-				handler));
+		quit = new JMenuItem("Quit");
+		update = new JMenuItem("Update");
+
+        update.addActionListener(new ChannelListener(this,0));
 		quit.addActionListener(new QuitListener());
 
-		menu.add(setTimer);
-		menu.add(setDestination);
+        menu.add(update);
 		menu.add(quit);
 
 		channel = new JMenu("Channel");
@@ -111,9 +133,9 @@ public class MyGui {
         table.setModel(new DefaultTableModel(tableData,
                 new String[]{"title", "start", "end",
                         "image", "description"}));
-        table.getColumnModel().getColumn(0).setPreferredWidth(300);
-        table.getColumnModel().getColumn(1).setPreferredWidth(140);
-        table.getColumnModel().getColumn(2).setPreferredWidth(140);
+        table.getColumnModel().getColumn(0).setPreferredWidth(340);
+        table.getColumnModel().getColumn(1).setPreferredWidth(130);
+        table.getColumnModel().getColumn(2).setPreferredWidth(130);
         table.getColumnModel().removeColumn(table.getColumnModel().getColumn(3));
         table.getColumnModel().removeColumn(table.getColumnModel().getColumn(3));
         table.setRowHeight(25);
@@ -131,7 +153,7 @@ public class MyGui {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        channelImage.setIcon(new ImageIcon(img.getScaledInstance(120,120,Image.SCALE_SMOOTH)));
+        channelImage.setIcon(new ImageIcon(img.getScaledInstance(200,200,Image.SCALE_SMOOTH)));
         channelImage.updateUI();
     }
 

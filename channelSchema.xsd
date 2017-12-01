@@ -13,6 +13,7 @@
 	<xs:element name="image" type="xs:string" />
 	<xs:element name="imagetemplate" type="xs:string" />
 	<xs:element name="color" type="xs:string" />
+    <xs:element name="tagline" type ="xs:string" />
 	<xs:element name="siteurl" type="xs:string" />
 	<xs:element name="url" type="xs:string" />
 	<xs:element name="statkey" type="xs:string" />
@@ -63,6 +64,7 @@
                 <xs:element ref="image" />
                 <xs:element ref="imagetemplate" />
                 <xs:element ref="color" />
+                <xs:element ref="tagline" minOccurs="0" maxOccurs="1" />
                 <xs:element ref="siteurl" />
                 <xs:element ref="liveaudio" />
                 <xs:element ref="scheduleurl" />

@@ -34,7 +34,7 @@ public class RowListener implements MouseListener {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			image.setIcon(new ImageIcon(img.getScaledInstance(120,120,Image.SCALE_SMOOTH)));
+			image.setIcon(new ImageIcon(img.getScaledInstance(200,200,Image.SCALE_SMOOTH)));
 	    	info.setText(infoText);
 	    	System.err.println(infoText);
 	    }
