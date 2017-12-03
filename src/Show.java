@@ -1,3 +1,14 @@
+/*
+ * Applikationsutveckling i Java
+ * HT17
+ * Obligatorisk uppgift 2
+ * RadioInfo
+
+ * File:    Show.java
+ * Author:  Emil Lindqvist
+ * User:    c13elt
+ * Date:    3 December 2017
+ */
 import java.time.ZonedDateTime;
 
 public class Show {

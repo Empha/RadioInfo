@@ -1,5 +1,14 @@
-/* Please note that this is NOT a fully working program, and requires a bit more work.*/
+/*
+ * Applikationsutveckling i Java
+ * HT17
+ * Obligatorisk uppgift 2
+ * RadioInfo
 
+ * File:    RadioInfo.java
+ * Author:  Emil Lindqvist
+ * User:    c13elt
+ * Date:    3 December 2017
+ */
 import java.net.MalformedURLException;
 import java.net.URL;
 

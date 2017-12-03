@@ -1,3 +1,14 @@
+/*
+ * Applikationsutveckling i Java
+ * HT17
+ * Obligatorisk uppgift 2
+ * RadioInfo
+
+ * File:    MyGui.java
+ * Author:  Emil Lindqvist
+ * User:    c13elt
+ * Date:    3 December 2017
+ */
 import java.awt.*;
 import java.io.IOException;
 import java.net.MalformedURLException;

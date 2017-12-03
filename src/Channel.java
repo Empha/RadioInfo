@@ -1,4 +1,14 @@
+/*
+ * Applikationsutveckling i Java
+ * HT17
+ * Obligatorisk uppgift 2
+ * RadioInfo
 
+ * File:    Channel.java
+ * Author:  Emil Lindqvist
+ * User:    c13elt
+ * Date:    3 December 2017
+ */
 public class Channel {
 
     private String name;
