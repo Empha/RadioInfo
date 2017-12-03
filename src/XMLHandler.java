@@ -35,7 +35,6 @@ public class XMLHandler {
 
 	public boolean validate(URL source) {
 		try {
-			//Source xmlFile = new StreamSource(source.openStream());
 			Source xmlFile = new StreamSource(source.openStream());
 			SchemaFactory schemaFactory = SchemaFactory.newInstance(
 					XMLConstants.W3C_XML_SCHEMA_NS_URI);

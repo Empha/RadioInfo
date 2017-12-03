@@ -20,7 +20,7 @@ import javax.swing.JOptionPane;
 
 public class TimerListener implements ActionListener {
 	
-	private static int halfHourInMillis = 1800000;
+	private static int hourInMillis = 3600000;
 	private JFrame frame;
 	private int num;
 	private Timer timer;
@@ -43,7 +43,7 @@ public class TimerListener implements ActionListener {
 		} catch (NumberFormatException e1) {
 			JOptionPane.showMessageDialog(frame, "Input must be a number.");
 		}
-		int time = num*halfHourInMillis;
+		int time = num*hourInMillis;
 		if (num == 0){
 			timer.cancel();
 		} else if (num >= 1) {
